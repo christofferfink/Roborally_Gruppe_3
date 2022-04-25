@@ -28,7 +28,7 @@ import org.jetbrains.annotations.NotNull;
  * ...
  *
  * @author Ekkart Kindler, ekki@dtu.dk
- *
+ * @author Peter Møller
  */
 public class GameController {
 
