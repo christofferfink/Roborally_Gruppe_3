@@ -302,18 +302,54 @@ public class GameController {
      */
 
     public void moveForward(Player player) {
-        if (board != null && player != null && player.board == board) {Heading heading = player.getHeading();
-            Space space = player.getSpace();
-            Space target = board.getNeighbour(space, heading);
-            if(target != null) {
-                try {
-                    movePlayerToSpace(player,target,heading);
-                } catch (moveNotPossibleException ignored){
-                }
-            }
-        }
-    }
+        if (player != null && player.board == board) {
+            Space currentPosition = player.getSpace();
 
+            if (player.getSpace().getNeighbourSpace(player.getHeading()).getPlayer() != null) {
+                Player neighbourPlayer = player.getSpace().getNeighbourSpace(player.getHeading()).getPlayer();
+                moveForwardInHeading(neighbourPlayer, player.getHeading());
+            }
+
+            if (player.getSpace().getNeighbourSpace(player.getHeading()).getWalls().contains(player.getHeading().opposite())) {
+                return;
+            }
+
+            if (player.getSpace().getWalls().contains(player.getHeading())) {
+                return;
+            }
+
+            int x = currentPosition.x;
+            int y = currentPosition.y;
+
+            int newX = 0, newY = 0;
+
+            switch (player.getHeading()) {
+
+                case NORTH:
+                    newX = x;
+                    newY = (y - 1) % board.height;
+
+                    if (newY == -1)
+                        newY = 7;
+
+                    break;
+                case SOUTH:
+                    newX = x;
+                    newY = (y + 1) % board.height;
+                    break;
+                case WEST:
+                    newX = (x - 1) % board.width;
+
+                    if (newX == -1)
+                        newX = 7;
+
+                    newY = y;
+                    break;
+                case EAST:
+                    newX = (x + 1) % board.width;
+                    newY = y;
+                    break;
+            }
     /**
      * ...
      *
@@ -331,6 +367,7 @@ public class GameController {
      * @param heading
      * @throws moveNotPossibleException
      */
+
     private void movePlayerToSpace(@NotNull Player player, @NotNull Space space, @NotNull Heading heading)
             throws moveNotPossibleException {
         Player other = space.getPlayer();
