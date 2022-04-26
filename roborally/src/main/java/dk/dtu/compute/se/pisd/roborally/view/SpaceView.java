@@ -105,19 +105,29 @@ public class SpaceView extends StackPane implements ViewObserver {
     public void updateView(Subject subject) {
         if (subject == this.space) {
             updatePlayer();
-            Pane pane = new Pane();
-            Rectangle rectangle =
-                    new Rectangle(0.0, 0.0, SPACE_WIDTH, SPACE_HEIGHT);
-            rectangle.setFill(Color.TRANSPARENT);
-            pane.getChildren().add(rectangle);
-//south
-            Line line =
-                    new Line(2, SPACE_HEIGHT-2,
-                            SPACE_WIDTH-2, SPACE_HEIGHT-2);
-            line.setStroke(Color.RED);
-            line.setStrokeWidth(5);
-            pane.getChildren().add(line);
-            this.getChildren().add(pane);
+            if(space.getWalls() != null) {
+                for(Heading wall : space.getWalls()) {
+                    Pane pane = new Pane();
+                    Rectangle rectangle =
+                            new Rectangle(0.0, 0.0, SPACE_WIDTH, SPACE_HEIGHT);
+                    rectangle.setFill(Color.TRANSPARENT);
+                    pane.getChildren().add(rectangle);
+
+                    Line line =
+                            new Line(2, SPACE_HEIGHT - 2,
+                                    SPACE_WIDTH - 2, SPACE_HEIGHT - 2);
+                    line.setStroke(Color.RED);
+                    line.setStrokeWidth(5);
+                    switch (wall){
+                        case WEST -> pane.setRotate(90);
+                        case NORTH -> pane.setRotate(180);
+                        case EAST -> pane.setRotate(-90);
+                    }
+                    pane.getChildren().add(line);
+                    this.getChildren().add(pane);
+                }
+
+            }
 
         }
     }

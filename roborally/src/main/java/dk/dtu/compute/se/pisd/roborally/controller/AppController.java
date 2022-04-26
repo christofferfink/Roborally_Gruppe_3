@@ -27,6 +27,7 @@ import dk.dtu.compute.se.pisd.designpatterns.observer.Subject;
 import dk.dtu.compute.se.pisd.roborally.RoboRally;
 
 import dk.dtu.compute.se.pisd.roborally.model.Board;
+import dk.dtu.compute.se.pisd.roborally.model.Heading;
 import dk.dtu.compute.se.pisd.roborally.model.Player;
 
 import javafx.application.Platform;
@@ -84,7 +85,16 @@ public class AppController implements Observer {
                 board.addPlayer(player);
                 player.setSpace(board.getSpace(i % board.width, i));
             }
-
+/**
+* @author Christoffer Fink s205449
+ */
+// wall west for test
+            Space space = board.getSpace(4,4);
+            space.addWall(Heading.WEST);
+            space.addWall(Heading.NORTH);
+            space.addWall(Heading.SOUTH);
+            space.addWall(Heading.EAST);
+            
             // XXX: V2
             // board.setCurrentPlayer(board.getPlayer(0));
             gameController.startProgrammingPhase();

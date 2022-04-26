@@ -347,6 +347,26 @@ public class GameController {
                         heading);
             }
         }
+        /**
+         * @author Christoffer Fink 205449
+         */
+        if(player.getSpace() != null){
+           if(player.getSpace().getWalls() != null){
+               for(Heading wall : player.getSpace().getWalls()){
+                   if(wall == heading) {
+                       throw new moveNotPossibleException(player, space, heading);
+                   }
+               }
+           }
+        }
+        if(space.getWalls() != null){
+            for(Heading wall : space.getWalls()){
+                if(wall.prev().prev() == heading) {
+                    throw new moveNotPossibleException(player, space, heading);
+                }
+            }
+        }
+
         player.setSpace(space);
     }
 
