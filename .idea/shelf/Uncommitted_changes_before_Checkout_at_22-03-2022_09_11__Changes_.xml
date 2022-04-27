@@ -1,9 +1,0 @@
-<changelist name="Uncommitted_changes_before_Checkout_at_22-03-2022_09_11_[Changes]" date="1647936734042" recycled="true" deleted="true">
-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22-03-2022_09_11_[Changes]/shelved.patch" />
-  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 22-03-2022 09:11 [Changes]" />
-  <binary>
-    <option name="BEFORE_PATH" value="roborally/target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView.class" />
-    <option name="AFTER_PATH" value="roborally/target/classes/dk/dtu/compute/se/pisd/roborally/view/SpaceView.class" />
-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22-03-2022_09_11_[Changes]/SpaceView.class" />
-  </binary>
-</changelist>

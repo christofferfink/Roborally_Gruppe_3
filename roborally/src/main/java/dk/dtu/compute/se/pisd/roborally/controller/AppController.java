@@ -30,6 +30,7 @@ import dk.dtu.compute.se.pisd.roborally.model.Board;
 import dk.dtu.compute.se.pisd.roborally.model.Heading;
 import dk.dtu.compute.se.pisd.roborally.model.Player;
 
+import dk.dtu.compute.se.pisd.roborally.model.Space;
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -88,7 +89,7 @@ public class AppController implements Observer {
 /**
 * @author Christoffer Fink s205449
  */
-// wall west for test
+// wall west og de andre retninger for test
             Space space = board.getSpace(4,4);
             space.addWall(Heading.WEST);
             space.addWall(Heading.NORTH);
