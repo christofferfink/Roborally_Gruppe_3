@@ -106,9 +106,9 @@ public class Space extends Subject {
         notifyChange();
     }
 
-}
     public Space getNeighbourSpace(Heading heading) {
-        int newX, newY;
+        int newX;
+        int newY;
         switch (heading) {
 
             case NORTH:
@@ -143,3 +143,4 @@ public class Space extends Subject {
         return this.board.getSpace(newX, newY);
 
     }
+}

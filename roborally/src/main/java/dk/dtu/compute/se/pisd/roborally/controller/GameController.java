@@ -34,6 +34,7 @@ public class GameController {
 
     final public Board board;
 
+
     public GameController(@NotNull Board board) {
         this.board = board;
     }
@@ -301,7 +302,7 @@ public class GameController {
      * @param player
      */
 
-    public void moveForward(Player player) {
+    public void moveForward(Player player) throws moveNotPossibleException {
         if (player != null && player.board == board) {
             Space currentPosition = player.getSpace();
 
@@ -356,7 +357,7 @@ public class GameController {
      * @author Oskar Lolk Larsen,  s215717
      *
      */
-
+            
     /**
      *
      * The movePlayerToSpace which relocates the pushed player to the next space which the pushing player is heading.
