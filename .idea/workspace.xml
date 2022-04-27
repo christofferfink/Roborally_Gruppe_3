@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2852cad-b35f-4c1f-9a7e-3f79e569b46e" name="Changes" comment="readme tilføjet">
-      <change afterPath="$PROJECT_DIR$/roborally/src/main/resources/boards/defaultboard.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roborally/src/main/resources/images/checkpoint1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roborally/src/main/resources/images/checkpoint2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roborally/src/main/resources/images/checkpoint3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roborally/src/main/resources/images/checkpoint4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/roborally/src/main/resources/schemas/createschema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roborally/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/roborally/src/main/java/dk/dtu/compute/se/pisd/roborally/controller/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roborally/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Space.java" beforeDir="false" afterPath="$PROJECT_DIR$/roborally/src/main/java/dk/dtu/compute/se/pisd/roborally/model/Space.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,14 +38,15 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "C:/Users/oskar/IdeaProjects/Roborally_Gruppe_3/roborally/src/main",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/oskar/IdeaProjects/Roborally_Gruppe_3/roborally/src/main&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\oskar\IdeaProjects\Roborally_Gruppe_3\roborally\src\main" />
       <recent name="C:\Users\oskar\IdeaProjects\roborally_A3\roborally" />
       <recent name="C:\Users\chris\Desktop\roborallyMV\roborally" />
     </key>
@@ -92,6 +89,9 @@
       <list>
         <item itemvalue="Application.StartRoboRally" />
         <item itemvalue="Application.RoboRally" />
+        <item itemvalue="Application.StartRoboRally" />
+        <item itemvalue="Application.RoboRally" />
+        <item itemvalue="Application.StartRoboRally" />
       </list>
     </recent_temporary>
   </component>
