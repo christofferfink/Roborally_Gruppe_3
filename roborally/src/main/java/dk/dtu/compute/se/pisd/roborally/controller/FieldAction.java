@@ -6,6 +6,6 @@ import java.util.ArrayList;
 /**
  * @author Christoffer Fink s205449
  */
-public abstract class FieldAction {
+public interface FieldAction {
 
  }

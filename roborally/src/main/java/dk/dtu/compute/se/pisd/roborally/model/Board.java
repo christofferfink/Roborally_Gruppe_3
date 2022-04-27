@@ -70,6 +70,16 @@ public class Board extends Subject {
         }
     }
 
+
+
+    private List<Checkpoint> checkpoints = new ArrayList<Checkpoint>();
+
+    public List<Checkpoint> getCheckpoints(){
+        return this.checkpoints;
+    }
+
+
+
     public Board(int width, int height, @NotNull String boardName) {
         this.boardName = boardName;
         this.width = width;
